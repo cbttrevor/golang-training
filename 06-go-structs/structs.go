@@ -14,10 +14,23 @@ type Car struct {
 }
 
 type Person struct {
-	firstName string
-	lastName  string
-	company   string
-	age       uint8
+	firstName      string
+	lastName       string
+	company        string
+	age            uint8
+	distanceWalked uint32
+}
+
+func (p *Person) Walk(distance uint8) {
+	p.distanceWalked += uint32(distance)
+}
+
+func testDistanceWalked() {
+	person01 := Person{firstName: "Billy", lastName: "Bob", age: 22, company: "Contoso"}
+
+	person01.Walk(5)
+	person01.Walk(12)
+	fmt.Printf("%+v\n", person01)
 }
 
 func main() {
@@ -33,7 +46,8 @@ func main() {
 	fmt.Printf("%p\n", &person01)
 	fmt.Printf("%p\n", &person02)
 
-	testStructRefs()
+	// testStructRefs()
+	testDistanceWalked()
 }
 
 func testStructRefs() {
