@@ -1,0 +1,3 @@
+{{define "footer" -}}
+Thanks for watching Go templates. This is my footer.
+{{end}}

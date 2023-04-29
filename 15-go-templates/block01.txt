@@ -1,0 +1,3 @@
+{{ define "header" -}}
+Hello from Go templates. This is my header.
+{{ end }}

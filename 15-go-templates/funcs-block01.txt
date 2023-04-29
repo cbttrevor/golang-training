@@ -1,0 +1,4 @@
+{{ define "funcsTest" }}
+Hello {{ .FirstName }} {{ .LastName }}.
+Today is {{ todayDate }}. The current year is {{ todayDate | getYearFromString }}
+{{ end }}

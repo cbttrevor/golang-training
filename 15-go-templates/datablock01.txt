@@ -1,0 +1,9 @@
+{{ define "message" }}
+Hello {{ .FirstName }} {{ .LastName }}, thanks for subscribing to the CBT Nuggets newsletter.
+Today is {{ .Today }}.
+{{ if gt .Age 30 -}}
+Your age is greater than 30.
+{{ else -}}
+Your age is NOT greater than 30.
+{{ end }}
+{{ end }}
